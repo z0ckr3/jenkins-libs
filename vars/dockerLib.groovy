@@ -3,7 +3,7 @@ def build(Map params) {
 }
 
 def login(Map params) {
-    sh "${params.DockerPass} | docker login -u ${params.DockerUser} --password-stdin"
+    sh "echo ${params.DockerPass} | docker login -u ${params.DockerUser} --password-stdin"
 }
 
 def push(Map params) {
